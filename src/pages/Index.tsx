@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -160,7 +161,9 @@ const Index = () => {
                   
                   <div className="flex items-center justify-between pt-4 border-t">
                     <span className="text-lg font-bold text-primary">{item.price}</span>
-                    <Button size="sm">Подробнее</Button>
+                    <Link to={`/product/${item.id}`}>
+                      <Button size="sm">Подробнее</Button>
+                    </Link>
                   </div>
                 </CardContent>
               </Card>
